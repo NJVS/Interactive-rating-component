@@ -11,6 +11,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 
 ## Overview
@@ -93,8 +94,12 @@ document.querySelector('form').addEventListener('submit', event => {
 ```
 BTW. I overlap the cards, so if I remove the card on which the form is located, the thankyou card will be visible.
 
+### Continued development
+
+Im planning to restart this challange, or just create my own personal project. I'll try to create a reusable javascript rating component (module), just like when you visit a website and then after quite some time, a survey will pop-up.
+
 ### Useful resources
 
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - I alway open this guide every time I use CSS Flexbox
 - [Javascript FormData() contructor](https://developer.mozilla.org/en-US/docs/Web/API/FormData/FormData)
-- [javascript Object.fromEntries() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
+- [Javascript Object.fromEntries() method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/fromEntries)
