@@ -1,0 +1,165 @@
+@use './reset';
+@use './helpers'as var;
+
+html {
+  font-size: 15px;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: var.$fontFamily;
+  background-color: var.$c-very-dark-blue;
+}
+
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: min(400px, 95%);
+  height: 400px;
+  padding: 2rem;
+  background: radial-gradient(circle at top, lighten(var.$c-dark-blue, 5%), var.$c-dark-blue, var.$c-dark-blue);
+  border-radius: 2rem;
+
+  .card-header {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  .card-result {
+    p {
+      padding: 0.4rem 1rem 0.2rem 1rem;
+      background-color: rgba(var.$c-light-grey, 0.1);
+      border-radius: 50vh;
+      color: rgba(var.$c-orange, 0.5);
+      text-justify: inter-cluster;
+    }
+  }
+
+  .card-content {
+    h1 {
+      margin-bottom: 0.5rem;
+      color: var.$c-white;
+    }
+
+    p {
+      color: var.$c-medium-grey;
+    }
+  }
+
+  form.card-form {
+    margin-top: auto;
+
+    .rating-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+
+      input[type=radio] {
+        all: unset;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(var.$c-light-grey, 0.1);
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &::before {
+          content: attr(value);
+          position: absolute;
+          top: 55%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: var.$c-medium-grey;
+          transition: all 0.3s ease;
+        }
+
+        &:hover:not(:checked) {
+          background-color: var.$c-orange;
+
+          &::before {
+            color: var.$c-white;
+          }
+        }
+
+        &:checked {
+          background-color: var.$c-light-grey;
+
+          &::before {
+            color: var.$c-white;
+          }
+        }
+      }
+    }
+
+
+    input[type=submit] {
+      display: block;
+      width: 100%;
+      padding: 0.7rem 0 0.35rem 0;
+      background-color: var.$c-orange;
+      border: none;
+      border-radius: 50vh;
+      color: var.$c-white;
+      letter-spacing: 2.5px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var.$c-white;
+        color: var.$c-orange;
+      }
+    }
+  }
+
+  &.card-rating {
+    z-index: 999;
+
+    .card-header .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 41px;
+      height: 40px;
+      background-color: rgba(var.$c-light-grey, 0.1);
+      border-radius: 50vh;
+    }
+  }
+
+  &.card-thankyou {
+    align-items: center;
+    text-align: center;
+
+    .card-header .icon {
+      width: 162px;
+      height: 116.5px;
+    }
+
+    .card-content {
+      margin: auto 0;
+    }
+  }
+}
+
+
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+
+  a {
+    color: var.$c-orange;
+  }
+}

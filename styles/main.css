@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  width: 100%;
+  height: auto;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  position: relative;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 15px;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Overpass", sans-serif;
+  background-color: #121417;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: min(400px, 95%);
+  height: 400px;
+  padding: 2rem;
+  background: radial-gradient(circle at top, #202937, #161d27, #161d27);
+  border-radius: 2rem;
+}
+.card .card-header {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.card .card-result p {
+  padding: 0.4rem 1rem 0.2rem 1rem;
+  background-color: rgba(149, 158, 172, 0.1);
+  border-radius: 50vh;
+  color: rgba(251, 116, 19, 0.5);
+  text-justify: inter-cluster;
+}
+.card .card-content h1 {
+  margin-bottom: 0.5rem;
+  color: white;
+}
+.card .card-content p {
+  color: #7c8798;
+}
+.card form.card-form {
+  margin-top: auto;
+}
+.card form.card-form .rating-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+.card form.card-form .rating-container input[type=radio] {
+  all: unset;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(149, 158, 172, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card form.card-form .rating-container input[type=radio]::before {
+  content: attr(value);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #7c8798;
+  transition: all 0.3s ease;
+}
+.card form.card-form .rating-container input[type=radio]:hover:not(:checked) {
+  background-color: #fb7413;
+}
+.card form.card-form .rating-container input[type=radio]:hover:not(:checked)::before {
+  color: white;
+}
+.card form.card-form .rating-container input[type=radio]:checked {
+  background-color: #959eac;
+}
+.card form.card-form .rating-container input[type=radio]:checked::before {
+  color: white;
+}
+.card form.card-form input[type=submit] {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 0 0.35rem 0;
+  background-color: #fb7413;
+  border: none;
+  border-radius: 50vh;
+  color: white;
+  letter-spacing: 2.5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card form.card-form input[type=submit]:hover {
+  background-color: white;
+  color: #fb7413;
+}
+.card.card-rating {
+  z-index: 999;
+}
+.card.card-rating .card-header .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 40px;
+  background-color: rgba(149, 158, 172, 0.1);
+  border-radius: 50vh;
+}
+.card.card-thankyou {
+  align-items: center;
+  text-align: center;
+}
+.card.card-thankyou .card-header .icon {
+  width: 162px;
+  height: 116.5px;
+}
+.card.card-thankyou .card-content {
+  margin: auto 0;
+}
+
+.attribution {
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+.attribution a {
+  color: #fb7413;
+}
+
+/*# sourceMappingURL=main.css.map */

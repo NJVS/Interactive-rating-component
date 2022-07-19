@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="card card-rating">
+    <div class="card-header">
+      <div class="icon">
+        <object type="image/svg+xml" data="./assets/images/icon-star.svg">
+          <img src="./assets/images/icon-star.svg" alt="rating card header icon">
+        </object>
+      </div>
+    </div>
+    <div class="card-content">
+      <h1>How did we do?</h1>
+      <p>Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!</p>
+    </div>
+    <form class="card-form">
+      <div class="rating-container">
+        <input type="radio" name="rating" id="rt1" value="1" required>
+        <input type="radio" name="rating" id="rt1" value="2">
+        <input type="radio" name="rating" id="rt1" value="3">
+        <input type="radio" name="rating" id="rt1" value="4">
+        <input type="radio" name="rating" id="rt1" value="5">
+      </div>
+      <input type="submit" value="SUBMIT">
+    </form>
+  </div>
+  <div class="card card-thankyou">
+    <div class="card-header">
+      <div class="icon">
+        <object type="image/svg+xml" data="./assets/images/illustration-thank-you.svg">
+          <img src="./assets/images/illustration-thank-you.svg" alt="thankyou card header image">
+        </object>
+      </div>
+    </div>
+    <div class="card-result">
+      <p>You selected <span id="rateResult">1</span> out of 5</p>
+    </div>
+    <div class="card-content text-center">
+      <h1>Thank you!</h1>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!</p>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">lieneil</a>.
+  </div>
+
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
